@@ -7,7 +7,6 @@
 in
   l.mapAttrs (_: std.std.lib.mkShell) {
     default = {...}: {
-
       std.adr.enable = false;
 
       name = "Zeek Spicy IMAP";
@@ -20,6 +19,7 @@ in
 
       nixago = [
         cell.nixago.mdbook
+        cell.nixago.treefmt
       ];
     };
   }

@@ -3,7 +3,7 @@
   cell,
 }: let
   inherit (inputs) std;
-  in {
+in {
   mdbook = std.std.nixago.mdbook {
     configData = {
       book.title = "Zeek Spicy IMAP";
