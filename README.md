@@ -9,7 +9,7 @@ This is a spicy parser of IMAP for Zeek based on https://www.youtube.com/watch?v
 - Nix: Compile the analyzer.spicy to hlto
 
 ```
-nix develop github:GTrunSec/hunting-cells#devShells.x86_64-linux.zeek -c spicy-compile imap
+nix develop --command spicy-compile imap
 ```
 
 
@@ -21,6 +21,5 @@ cmake ..
 cmake --build .
 cd ../tests
 btest
-
 ```
 

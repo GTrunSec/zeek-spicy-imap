@@ -23,5 +23,14 @@ jobs:
           pushFilter: '(-source$|nixpkgs\.tar\.gz$)'
           authToken: "${{ secrets.CACHIX_AUTH_TOKEN }}"
 
-      - name: Build Spicy
-        run: nix develop github:GTrunSec/hunting-lab#build --refresh --command just compile
+      # - name: Build Spicy
+      #   run: nix develop github:GTrunSec/hunting-lab#build --refresh --command just compile
+      #
+      - name: Build Doc
+        run: nix develop --command mdbook build
+
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@v4.4.0
+        with:
+          branch: gh-pages
+          folder: ./docs/book

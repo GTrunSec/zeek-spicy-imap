@@ -1,0 +1,11 @@
+[book]
+language = "en"
+multilingual = false
+src = "docs"
+title = "Zeek Spicy IMAP"
+
+[build]
+build-dir = "docs/book"
+
+[preprocessor.kroki-preprocessor]
+command = "mdbook-kroki-preprocessor"
